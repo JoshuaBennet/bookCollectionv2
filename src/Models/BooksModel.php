@@ -14,7 +14,9 @@ class BooksModel
 
     public function getAllBooks(): array
     {
-        $query = $this->db->prepare('SELECT `id`, `name`, `author`, `price`, `image`, `deleted` FROM `books` ORDER BY `author` DESC');
+
+//        possibly add ORDER BY `author` DESC if needed later
+        $query = $this->db->prepare('SELECT `id`, `name`, `author`, `price`, `image`, `deleted` FROM `books` ');
         $query->execute();
         return $query->fetchAll();
     }
