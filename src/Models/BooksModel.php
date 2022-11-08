@@ -21,9 +21,11 @@ class BooksModel
         return $query->fetchAll();
     }
 
-    public function addBookToDB()
-    {
-        $query = $this->db->prepare('INSERT INTO `name`, `author`, `price`, `image`');
-        $query->execute();
-    }
+    // add book function to be added later
+
+//    public function addBookToDB()
+//    {
+//        $query = $this->db->prepare('INSERT INTO `name`, `author`, `price`, `image`');
+//        $query->execute();
+//    }
 }
