@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Models;
-use PDO;
+use App\Factories\PDOFactory;
 
 class BooksModel
 {
-    protected PDO $db;
+    protected PDOFactory $db;
 
-    public function __construct(PDO $db)
+    public function __construct(PDOFactory $db)
     {
         $this->db = $db;
     }
@@ -16,7 +16,7 @@ class BooksModel
     {
 
 //        possibly add ORDER BY `author` DESC if needed later
-        $query = $this->db->prepare('SELECT `id`, `name`, `author`, `price`, `image`, `deleted` FROM `books` ');
+        $query = $this->db->prepare('SELECT `id`, `name`, `author`, `price`, `image`, `deleted` FROM `books`');
         $query->execute();
         return $query->fetchAll();
     }

@@ -9,8 +9,7 @@ use Slim\Interfaces\RouteCollectorProxyInterface as Group;
 return function (App $app) {
     $container = $app->getContainer();
 
-    $app->add('/', IndexController::class);
+    $app->get('/', IndexController::class);
 
-    $app->get('/courses', IndexController::class);
 
 };

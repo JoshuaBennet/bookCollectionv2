@@ -16,7 +16,7 @@ use App\Controllers\IndexController;
 <div>
     <section class="bookshelf">
         <?php
-        
+
         ?>
     </section>
 </div>
