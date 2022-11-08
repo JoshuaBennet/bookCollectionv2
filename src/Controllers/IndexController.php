@@ -1,8 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
-
 namespace App\Controllers;
 
 
@@ -10,11 +7,10 @@ use App\Models\BooksModel;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class CoursesAPIController
+class IndexController
 {
     private BooksModel $model;
 
-    // Here, the parameter is automatically supplied by the Dependency Injection Container based on the type hint
     public function __construct(BooksModel $model)
     {
         $this->model = $model;
@@ -22,11 +18,11 @@ class CoursesAPIController
 
     public function __invoke(RequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        $courses = $this->model->getCourses();
+        $books = $this->model->getAllBooks();
         $responseBody = [
-            'message' => 'Courses successfully retrieved from db.',
+            'message' => 'Books successfully retrieved from db.',
             'status' => 200,
-            'data' => $courses
+            'data' => $books
         ];
         return $response->withJson($responseBody);
     }
