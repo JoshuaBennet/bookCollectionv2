@@ -1,33 +1,24 @@
+<?php
+use App\Controllers\IndexController;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Slim 4</title>
-    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-    <style>
-        body {
-            margin: 50px 0 0 0;
-            padding: 0;
-            width: 100%;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            text-align: center;
-            color: #aaa;
-            font-size: 18px;
-        }
-
-        h1 {
-            color: #719e40;
-            letter-spacing: -3px;
-            font-family: 'Lato', sans-serif;
-            font-size: 100px;
-            font-weight: 200;
-            margin-bottom: 0;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Joshua Bennet's PHP Book Collection App" />
+    <title>Book Collection</title>
 </head>
 <body>
-<h1>Slim</h1>
-<div>a microframework for PHP</div>
-    <p>Try <a href="http://www.slimframework.com">SlimFramework</a></p>
+<h1>Josh's Library</h1>
+<div>The Bookshelf</div>
+<div>
+    <section class="bookshelf">
+        <?php
+        
+        ?>
+    </section>
+</div>
 </body>
 </html>
