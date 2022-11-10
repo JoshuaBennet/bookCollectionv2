@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Models;
-use App\Factories\PDOFactory;
+use PDO;
 
 class BooksModel
 {
-    protected PDOFactory $db;
+    private PDO $db;
 // TODO Still not working need to reach out to Ash, as I cannot find the problem and researching is becoming a circle.
-    public function __construct(PDOFactory $db)
+    public function __construct(PDO $db)
     {
         $this->db = $db;
     }

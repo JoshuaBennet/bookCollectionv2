@@ -1,5 +1,6 @@
 <?php
-use App\Controllers\IndexController;
+use App\Helpers\DisplayBooks;
+$displayBooks = new DisplayBooks;
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +17,7 @@ use App\Controllers\IndexController;
 <div>
     <section class="bookshelf">
         <?php
-
+            echo $displayBooks->createDisplayBooks($books);
         ?>
     </section>
 </div>
