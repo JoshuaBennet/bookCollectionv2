@@ -9,7 +9,7 @@ class DisplayBooks
 
         foreach ($books as $book) {
 
-            $outputString = "<div class='displayBook'>";
+            $outputString .= "<div class='displayBook'>";
             $outputString .= "<p class='bookName'>" . $book['name'] . "</p>";
             $outputString .= "<p class='bookAuthor'>" . $book['author'] . "</p>";
             $outputString .= "<p class='bookPrice'>£" . $book['price'] . "</p>";
