@@ -14,6 +14,9 @@ $displayBooks = new DisplayBooks;
 <body>
 <h1>Josh's Library</h1>
 <div>The Bookshelf</div>
+<div class="registrationContainer">
+    <a href="/addBook">Add a new book</a>
+</div>
 <div>
     <section class="bookshelf">
         <?php
